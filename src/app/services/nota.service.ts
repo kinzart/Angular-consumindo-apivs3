@@ -1,8 +1,8 @@
-import { environment } from '../../environments/environment';
 import { Pedidos } from './../interfaces/pedidos';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -10,8 +10,10 @@ import { Observable } from 'rxjs';
 })
 export class NotaService {
 
+ //apiLocal = 'http://localhost:3000';
  apiUrl = environment.apiUrl;
  environment = this.apiUrl
+
 
   constructor(private http: HttpClient) { }
 
