@@ -1,0 +1,68 @@
+<form #f="ngForm" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="client">Nome</label>
+    <input
+      class="form-control"
+      id="client"
+      rows="3"
+      placeholder="nome" name="client"
+      #client="ngModel"
+      [(ngModel)]="pedido.client"
+      [class.is-invalid]="!client.valid && client.touched"
+      required>
+
+    <div *ngIf="!client.valid && client.touched" class="text-danger">
+      Coloque seu nome:
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="client">Endereço</label>
+    <input
+      class="form-control"
+      id="address"
+      rows="3"
+      placeholder="Endereço" name="address"
+      #address="ngModel"
+      [(ngModel)]="pedido.address"
+      [class.is-invalid]="!address.valid && address.touched"
+      required>
+
+    <div *ngIf="!address.valid && address.touched" class="text-danger">
+      Coloque seu Endereço:
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="contact">Contato</label>
+    <input
+      class="form-control"
+      id="contact"
+      rows="3"
+      placeholder="Contato" name="contact"
+      #contact="ngModel"
+      [(ngModel)]="pedido.contact"
+      [class.is-invalid]="!contact.valid && contact.touched"
+      required>
+
+    <div *ngIf="!contact.valid && contact.touched" class="text-danger">
+      Coloque algum contato:
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="order">Pedido</label>
+    <input
+      class="form-control"
+      id="order"
+      rows="3"
+      placeholder="pedido" name="order"
+      #order="ngModel"
+      [(ngModel)]="pedido.order"
+      [class.is-invalid]="!order.valid && order.touched"
+      required>
+
+    <div *ngIf="!order.valid && order.touched" class="text-danger">
+      Faça seu pedido:
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Salvar</button>
+</form>
