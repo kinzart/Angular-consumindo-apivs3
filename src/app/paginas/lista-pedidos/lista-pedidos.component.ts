@@ -25,7 +25,7 @@ getListaPedidos() {
  }
 
 
-deletePedido(client: string) {
+deletePedido(client) {
   this.notaSvc.deletePedido(client)
   .subscribe(() => {
     this.getListaPedidos();

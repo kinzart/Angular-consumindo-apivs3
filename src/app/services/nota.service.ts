@@ -23,7 +23,7 @@ export class NotaService {
 
  }
 
- getOnePedido(client: string): Observable<Pedidos> {
+ getOnePedido(_id: object): Observable<Pedidos> {
     const url = `${this.environment}/order`;
     return this.http.get<Pedidos>(url);
  }
@@ -39,7 +39,7 @@ export class NotaService {
     return this.http.put<Pedidos>(url, pedidos);
  }
 
- deletePedido(client: string): Observable<Pedidos> {
+ deletePedido(_id: object): Observable<Pedidos> {
     const url = `${this.environment}/order`;
     return this.http.delete<Pedidos>(url);
  }

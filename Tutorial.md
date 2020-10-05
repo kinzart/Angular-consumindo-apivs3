@@ -179,3 +179,10 @@ import <ViewChild>, <Interface>, <service> and <errorMsgComponent>
 
 	
 
+29 - ng g c paginas/editar-pedido
+
+delete onInit
+
+import ErrorMsgComponen
+
+30 - 

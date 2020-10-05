@@ -8,6 +8,7 @@ import { ListaPedidosComponent } from './paginas/lista-pedidos/lista-pedidos.com
 import { FormPedidoComponent } from './compartilhado/form-pedido/form-pedido.component';
 import { FormsModule } from '@angular/forms';
 import { CriarPedidoComponent } from './paginas/criar-pedido/criar-pedido.component';
+import { EditarPedidoComponent } from './paginas/editar-pedido/editar-pedido.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CriarPedidoComponent } from './paginas/criar-pedido/criar-pedido.compon
     ErrorMsgComponent,
     ListaPedidosComponent,
     FormPedidoComponent,
-    CriarPedidoComponent
+    CriarPedidoComponent,
+    EditarPedidoComponent
   ],
   imports: [
     BrowserModule,
