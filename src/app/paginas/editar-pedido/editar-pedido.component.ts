@@ -22,7 +22,7 @@ export class EditarPedidoComponent {
 getOnePedido(_id: object) {
   this.notaSvc.getOnePedido(_id)
   .subscribe((pedido: Pedidos) => {
-    console.log('olha aqui', _id)
+    console.log('Estamos editando: ', _id)
     this.pedido = pedido;
   }, () => { this.errorMsg.setError('Falha ao identificar pedido'); });
 }
