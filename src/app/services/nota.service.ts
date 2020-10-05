@@ -25,7 +25,7 @@ export class NotaService {
 
  getOnePedido(_id: object): Observable<Pedidos> {
     const url = `${this.environment}/order`;
-    return this.http.get<Pedidos>(url);
+    return this.http.get<Pedidos>(url, _id);
  }
 
  addPedido(pedidos: Pedidos): Observable<Pedidos> {

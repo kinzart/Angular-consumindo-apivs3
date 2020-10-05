@@ -19,7 +19,7 @@ export class EditarPedidoComponent {
        this.getOnePedido(this.activetedRoute.snapshot.params._id)
      }
 
-getOnePedido(_id: string) {
+getOnePedido(_id: object) {
   this.notaSvc.getOnePedido(_id)
   .subscribe((pedido: Pedidos) => {
     console.log('olha aqui', _id)
