@@ -24,7 +24,7 @@ export class NotaService {
  }
 
  getOnePedido(_id: any): Observable<Pedidos> {
-    const url = `${this.environment}/order`;
+    const url = `${this.environment}/order/${_id}`;
     console.log(`Peguei o id: ${_id}`);
     return this.http.get<Pedidos>(url);
  }
@@ -37,13 +37,13 @@ export class NotaService {
  }
 
  updatePedido(pedidos: Pedidos): Observable<Pedidos> {
-    const url = `${this.environment}/order`;
-    console.log(`Atualizando o pedido: ${pedidos}`);
+    const url = `${this.environment}/order/${pedidos._id}`;
+    console.log(`Atualizando o pedido: ${pedidos._id}`);
     return this.http.put<Pedidos>(url, pedidos);
  }
 
  deletePedido(_id: any): Observable<Pedidos> {
-    const url = `${this.environment}/order`;
+    const url = `${this.environment}/order/${_id}`;
     console.log(`Apagando o pedido: ${_id}`);
     return this.http.delete<Pedidos>(url);
  }

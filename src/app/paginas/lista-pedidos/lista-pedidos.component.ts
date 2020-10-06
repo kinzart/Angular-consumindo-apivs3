@@ -25,7 +25,7 @@ getListaPedidos() {
  }
 
 
-deletePedido(_id: any) {
+deletePedido(_id:any) {
   this.notaSvc.deletePedido(_id)
   .subscribe(() => {
     this.getListaPedidos();

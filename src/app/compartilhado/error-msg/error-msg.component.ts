@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./error-msg.component.css']
 })
 export class ErrorMsgComponent {
+  static setError(arg0: string) {
+    throw new Error('Method not implemented.');
+  }
   public error: string;
 
 

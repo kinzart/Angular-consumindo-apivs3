@@ -6,12 +6,12 @@
       id="client"
       rows="3"
       placeholder="nome" name="client"
-      #client="ngModel"
+      #cliente="ngModel"
       [(ngModel)]="pedido.client"
-      [class.is-invalid]="!client.valid && client.touched"
+      [class.is-invalid]="!cliente.valid && cliente.touched"
       required>
 
-    <div *ngIf="!client.valid && client.touched" class="text-danger">
+    <div *ngIf="!cliente.valid && cliente.touched" class="text-danger">
       Coloque seu nome:
     </div>
   </div>
@@ -22,28 +22,28 @@
       id="address"
       rows="3"
       placeholder="Endereço" name="address"
-      #address="ngModel"
+      #endereco="ngModel"
       [(ngModel)]="pedido.address"
-      [class.is-invalid]="!address.valid && address.touched"
+      [class.is-invalid]="!endereco.valid && endereco.touched"
       required>
 
-    <div *ngIf="!address.valid && address.touched" class="text-danger">
+    <div *ngIf="!endereco.valid && endereco.touched" class="text-danger">
       Coloque seu Endereço:
     </div>
   </div>
   <div class="form-group">
-    <label for="contact">Contato</label>
+    <label for="contat">Contato</label>
     <input
       class="form-control"
       id="contact"
       rows="3"
       placeholder="Contato" name="contact"
-      #contact="ngModel"
+      #contato="ngModel"
       [(ngModel)]="pedido.contact"
-      [class.is-invalid]="!contact.valid && contact.touched"
+      [class.is-invalid]="!contato.valid && contato.touched"
       required>
 
-    <div *ngIf="!contact.valid && contact.touched" class="text-danger">
+    <div *ngIf="!contato.valid && contato.touched" class="text-danger">
       Coloque algum contato:
     </div>
   </div>
@@ -54,12 +54,12 @@
       id="order"
       rows="3"
       placeholder="pedido" name="order"
-      #order="ngModel"
+      #ordemPedido="ngModel"
       [(ngModel)]="pedido.order"
-      [class.is-invalid]="!order.valid && order.touched"
+      [class.is-invalid]="!ordemPedido.valid && ordemPedido.touched"
       required>
 
-    <div *ngIf="!order.valid && order.touched" class="text-danger">
+    <div *ngIf="!ordemPedido.valid && ordemPedido.touched" class="text-danger">
       Faça seu pedido:
     </div>
   </div>

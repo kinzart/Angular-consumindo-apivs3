@@ -23,7 +23,8 @@ import { EditarPedidoComponent } from './paginas/editar-pedido/editar-pedido.com
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

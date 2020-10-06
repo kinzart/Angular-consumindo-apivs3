@@ -13,7 +13,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EditarPedidoComponent {
   public pedido: Pedidos;
-  @ViewChild(ErrorMsgComponent) errorMsg: ErrorMsgComponent;
+  @ViewChild(ErrorMsgComponent) errorMsgComponent: ErrorMsgComponent;
 
   constructor(private notaSvc: NotaService,
     private activetedRoute: ActivatedRoute,
@@ -26,13 +26,13 @@ getOnePedido(_id: any) {
   .subscribe((pedido: Pedidos) => {
     console.log('Estamos editando: ', _id)
     this.pedido = pedido;
-  }, () => { this.errorMsg.setError('Falha ao identificar pedido'); });
+  }, () => { this.errorMsgComponent.setError('Falha ao identificar pedido'); });
 }
 
 updatePedido(pedido: Pedidos) {
   this.notaSvc.updatePedido(pedido)
   .subscribe(
     () => { this.router.navigateByUrl('/');},
-    () => { this.errorMsg.setError('Falha ao atualizar o pedido'); });
+    () => { this.errorMsgComponent.setError('Falha ao atualizar o pedido'); });
 }
 }
