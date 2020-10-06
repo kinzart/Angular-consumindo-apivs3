@@ -25,11 +25,11 @@ getListaPedidos() {
  }
 
 
-deletePedido(client) {
-  this.notaSvc.deletePedido(client)
+deletePedido(_id: any) {
+  this.notaSvc.deletePedido(_id)
   .subscribe(() => {
     this.getListaPedidos();
-  }, () => { this.errorMsgComponent.setError('Falha na tentativa de deletar os pedidos'); });
+  }, () => { this.errorMsgComponent.setError('Falha na tentativa de deletar o pedido'); });
  }
 
 

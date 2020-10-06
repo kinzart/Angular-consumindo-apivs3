@@ -1,5 +1,5 @@
 export interface Pedidos {
-_id: object;
+_id: any;
 client: string;
 address: string;
 contact: string;

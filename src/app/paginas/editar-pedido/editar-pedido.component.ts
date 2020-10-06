@@ -4,6 +4,8 @@ import { Pedidos } from './../../interfaces/pedidos';
 import { Component, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
+
+
 @Component({
   selector: 'app-editar-pedido',
   templateUrl: './editar-pedido.component.html',
@@ -19,7 +21,7 @@ export class EditarPedidoComponent {
        this.getOnePedido(this.activetedRoute.snapshot.params._id)
      }
 
-getOnePedido(_id: object) {
+getOnePedido(_id: any) {
   this.notaSvc.getOnePedido(_id)
   .subscribe((pedido: Pedidos) => {
     console.log('Estamos editando: ', _id)

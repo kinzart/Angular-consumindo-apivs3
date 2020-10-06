@@ -23,24 +23,28 @@ export class NotaService {
 
  }
 
- getOnePedido(_id: object): Observable<Pedidos> {
+ getOnePedido(_id: any): Observable<Pedidos> {
     const url = `${this.environment}/order`;
-    return this.http.get<Pedidos>(url, _id);
+    console.log(`Peguei o id: ${_id}`);
+    return this.http.get<Pedidos>(url);
  }
 
  addPedido(pedidos: Pedidos): Observable<Pedidos> {
     const url = `${this.environment}/order`;
+    console.log(`Adicionamos o pedido: ${pedidos}`);
     return this.http.post<Pedidos>(url, pedidos);
 
  }
 
  updatePedido(pedidos: Pedidos): Observable<Pedidos> {
     const url = `${this.environment}/order`;
+    console.log(`Atualizando o pedido: ${pedidos}`);
     return this.http.put<Pedidos>(url, pedidos);
  }
 
- deletePedido(_id: object): Observable<Pedidos> {
+ deletePedido(_id: any): Observable<Pedidos> {
     const url = `${this.environment}/order`;
+    console.log(`Apagando o pedido: ${_id}`);
     return this.http.delete<Pedidos>(url);
  }
 }

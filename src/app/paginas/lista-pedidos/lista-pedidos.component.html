@@ -13,22 +13,25 @@
 </div>
 
 
-<div class="row mt-3" *ngFor="let pdd of pedidos">
+<div class="row mt-3" *ngFor="let pedido of pedidos">
   <div class="col-md-8 mx-auto">
     <div class="card">
       <div class="card-header">
         <span class="badge badge-pill"
-          [class.badge-success]="pdd.client"
-          >{{ pdd.client }}
+          [class.badge-success]="pedido._id"
+          >{{ pedido._id }}
         </span>
       </div>
       <div class="card-body">
-        <p class="card-text">{{pdd.address}}</p>
+        <p class="card-text"><b>Nome:</b> {{pedido.client}}</p>
+        <p class="card-text"><b>Endereço:</b> {{pedido.address}}</p>
+        <p class="card-text"><b>Contato:</b> {{pedido.contact}}</p>
+        <p class="card-text"><b>Pedido:</b> {{pedido.order}}</p>
       </div>
       <div class="card-footer">
         <div class="text-right">
-          <button type="button" class="btn btn-primary btn-sm ml-1" routerLink="/pedidos/editar/{{pdd.client}}">Editar</button>
-          <button type="button" class="btn btn-primary btn-sm ml-1" (click)="deletePedido(pdd.client)">Deletar</button>
+          <button type="button" class="btn btn-primary btn-sm ml-1" routerLink="/pedidos/editar/{{pedido._id}}">Editar</button>
+          <button type="button" class="btn btn-primary btn-sm ml-1" (click)="deletePedido(pedido._id)">Deletar</button>
         </div>
       </div>
     </div>
