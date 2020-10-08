@@ -19,7 +19,7 @@ export class CriarPedidoComponent  {
     this.notaSvc.addPedido(pedido)
     .subscribe(
       () => { this.router.navigateByUrl('/'); },
-      () => { this.errorMsg.setError('Falha na tentativa de adicionar pedido.');}
+      () => { this.errorMsg.setError('Falha na tentativa de adicionar o pedido.');}
     );
   }
 
