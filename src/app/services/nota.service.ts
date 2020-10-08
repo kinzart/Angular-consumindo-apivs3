@@ -1,8 +1,11 @@
+
 import { Pedidos } from './../interfaces/pedidos';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+
+
 
 
 @Injectable({
@@ -11,7 +14,7 @@ import { environment } from 'src/environments/environment';
 export class NotaService {
 
  //apiLocal = 'http://localhost:3000';
- apiUrl = environment.apiUrl;
+ apiUrl = environment.apiUrl
  environment = this.apiUrl
 
 
@@ -25,7 +28,7 @@ export class NotaService {
 
  getOnePedido(_id: any): Observable<Pedidos> {
     const url = `${this.environment}/order/${_id}`;
-    console.log(`Peguei o id: ${_id}`);
+    console.log(`Entrando no id: ${_id}`);
     return this.http.get<Pedidos>(url);
  }
 
@@ -36,10 +39,9 @@ export class NotaService {
 
  }
 
- updatePedido(pedidos: Pedidos): Observable<Pedidos> {
-    const url = `${this.environment}/order/${pedidos._id}`;
-    console.log(`Atualizando o pedido: ${pedidos._id}`);
-    return this.http.put<Pedidos>(url, pedidos);
+ updatePedido(pedido: Pedidos): Observable<Pedidos> {
+    const url = `${this.environment}/order/${pedido._id}`;
+    return this.http.put<Pedidos>(url, pedido);
  }
 
  deletePedido(_id: any): Observable<Pedidos> {

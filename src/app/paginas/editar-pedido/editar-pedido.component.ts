@@ -24,7 +24,7 @@ export class EditarPedidoComponent {
 getOnePedido(_id: any) {
   this.notaSvc.getOnePedido(_id)
   .subscribe((pedido: Pedidos) => {
-    console.log('Estamos editando: ', _id)
+    console.log('Estamos editando: ');
     this.pedido = pedido;
   }, () => { this.errorMsgComponent.setError('Falha ao identificar pedido'); });
 }
@@ -32,6 +32,7 @@ getOnePedido(_id: any) {
 updatePedido(pedido: Pedidos) {
   this.notaSvc.updatePedido(pedido)
   .subscribe(
+
     () => { this.router.navigateByUrl('/');},
     () => { this.errorMsgComponent.setError('Falha ao atualizar o pedido'); });
 }

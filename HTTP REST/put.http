@@ -1,0 +1,14 @@
+//GET http://apivs3-com-br.umbler.net/order/
+
+
+
+//PUT  http://apivs2-com.umbler.net/artigo/5f6cadc9d29b43001bb0dffb
+
+
+POST  http://apivs2-com.umbler.net/artigo HTTP/1.1
+content-type: application/json charset=utf-8
+{
+  "_id": "1",
+  "titulo": "JOVEM PALITO DE DENTE",
+  "conteudo": "Atirrei o malandro pela janela",
+}
